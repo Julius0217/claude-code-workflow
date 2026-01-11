@@ -1,7 +1,6 @@
 # Claude Code Workflow
 
-![Uploading image.png…]()
-
+<img width="1666" height="928" alt="image" src="https://github.com/user-attachments/assets/c9e17942-bc0a-4c5b-957b-d92c6799cce1" />
 
 Claude Code의 핵심 사용 원칙과 생산성 높은 워크플로 구축 방법에 대한 연구 저장소입니다.
 
