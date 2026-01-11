@@ -1,0 +1,65 @@
+# Stale 이슈/PR 관리
+# 오래된 이슈와 PR을 자동으로 관리합니다.
+
+name: Stale Issues and PRs
+
+on:
+  schedule:
+    # 매일 09:00 (KST) 실행
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    name: Mark Stale
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Stale Action
+        uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          # 이슈 설정
+          stale-issue-message: |
+            👋 이 이슈는 60일 동안 활동이 없어 `stale`로 표시되었습니다.
+
+            14일 이내에 추가 활동이 없으면 자동으로 닫힙니다.
+
+            이 이슈가 여전히 유효하다면 댓글을 남겨주세요.
+          stale-issue-label: "stale"
+          days-before-issue-stale: 60
+          days-before-issue-close: 14
+          close-issue-message: |
+            🔒 이 이슈는 활동이 없어 자동으로 닫혔습니다.
+
+            문제가 해결되지 않았다면 새 이슈를 생성해 주세요.
+
+          # PR 설정
+          stale-pr-message: |
+            👋 이 PR은 30일 동안 활동이 없어 `stale`로 표시되었습니다.
+
+            7일 이내에 추가 활동이 없으면 자동으로 닫힙니다.
+
+            계속 작업 중이라면 댓글을 남기거나 변경사항을 푸시해 주세요.
+          stale-pr-label: "stale"
+          days-before-pr-stale: 30
+          days-before-pr-close: 7
+          close-pr-message: |
+            🔒 이 PR은 활동이 없어 자동으로 닫혔습니다.
+
+            작업을 계속하시려면 PR을 다시 열거나 새 PR을 생성해 주세요.
+
+          # 제외 라벨
+          exempt-issue-labels: "priority: high,pinned,security"
+          exempt-pr-labels: "priority: high,pinned,work-in-progress"
+
+          # 제외 담당자
+          exempt-all-assignees: true
+
+          # 작업 제한
+          operations-per-run: 30
