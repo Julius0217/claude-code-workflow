@@ -1,0 +1,24 @@
+{
+  "$schema": "https://claude.ai/schemas/hooks.json",
+  "description": "git commit 전에 테스트와 린트를 검증하는 훅",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": {
+          "tool_name": "Bash",
+          "command_pattern": "git commit"
+        },
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm run lint && npm test",
+            "description": "커밋 전 린트 및 테스트 실행",
+            "timeout": 120000,
+            "on_error": "block",
+            "error_message": "린트 또는 테스트 실패. 커밋이 차단되었습니다."
+          }
+        ]
+      }
+    ]
+  }
+}

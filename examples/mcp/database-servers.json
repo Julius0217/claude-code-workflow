@@ -1,0 +1,38 @@
+{
+  "$schema": "https://claude.ai/schemas/mcp.json",
+  "description": "데이터베이스 MCP 서버 설정 예제",
+  "mcpServers": {
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://user:password@localhost:5432/mydb"
+      ],
+      "description": "PostgreSQL 데이터베이스 연동",
+      "env": {
+        "PGPASSWORD": "${POSTGRES_PASSWORD}"
+      }
+    },
+    "sqlite": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sqlite",
+        "--db-path",
+        "./data/app.db"
+      ],
+      "description": "SQLite 로컬 데이터베이스"
+    },
+    "redis": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-server-redis",
+        "--url",
+        "redis://localhost:6379"
+      ],
+      "description": "Redis 캐시 서버 연동"
+    }
+  }
+}

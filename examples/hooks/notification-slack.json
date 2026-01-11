@@ -1,0 +1,35 @@
+{
+  "$schema": "https://claude.ai/schemas/hooks.json",
+  "description": "작업 완료 시 Slack으로 알림을 보내는 훅",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\"Claude Code 작업이 완료되었습니다: $CLAUDE_TASK_SUMMARY\"}' $SLACK_WEBHOOK_URL",
+            "description": "Slack 웹훅으로 완료 알림 전송",
+            "timeout": 10000,
+            "on_error": "warn"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": {
+          "level": "error"
+        },
+        "hooks": [
+          {
+            "type": "command",
+            "command": "curl -X POST -H 'Content-type: application/json' --data '{\"text\":\"⚠️ Claude Code 에러 발생: $CLAUDE_NOTIFICATION_MESSAGE\"}' $SLACK_WEBHOOK_URL",
+            "description": "에러 발생 시 Slack 알림",
+            "timeout": 10000,
+            "on_error": "ignore"
+          }
+        ]
+      }
+    ]
+  }
+}

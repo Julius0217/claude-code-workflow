@@ -1,0 +1,22 @@
+{
+  "$schema": "https://claude.ai/schemas/hooks.json",
+  "description": "파일 수정 후 자동으로 린트를 실행하는 훅",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": {
+          "tool_name": "Edit|Write"
+        },
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm run lint:fix -- $CLAUDE_FILE_PATH",
+            "description": "수정된 파일에 대해 ESLint 자동 수정 실행",
+            "timeout": 30000,
+            "on_error": "warn"
+          }
+        ]
+      }
+    ]
+  }
+}

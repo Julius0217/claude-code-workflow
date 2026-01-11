@@ -1,0 +1,39 @@
+{
+  "$schema": "https://claude.ai/schemas/hooks.json",
+  "description": "테스트 파일 수정 시 자동으로 해당 테스트를 실행하는 훅",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": {
+          "tool_name": "Edit|Write",
+          "file_pattern": "**/*.test.{ts,tsx,js,jsx}|**/*.spec.{ts,tsx,js,jsx}"
+        },
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm test -- --findRelatedTests $CLAUDE_FILE_PATH --passWithNoTests",
+            "description": "수정된 테스트 파일 실행",
+            "timeout": 60000,
+            "on_error": "warn"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "tool_name": "Edit|Write",
+          "file_pattern": "src/**/*.{ts,tsx,js,jsx}",
+          "exclude_pattern": "**/*.test.*|**/*.spec.*"
+        },
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm test -- --findRelatedTests $CLAUDE_FILE_PATH --passWithNoTests",
+            "description": "소스 파일 수정 시 관련 테스트 실행",
+            "timeout": 60000,
+            "on_error": "warn"
+          }
+        ]
+      }
+    ]
+  }
+}

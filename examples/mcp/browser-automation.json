@@ -1,0 +1,36 @@
+{
+  "$schema": "https://claude.ai/schemas/mcp.json",
+  "description": "브라우저 자동화 MCP 서버 설정 예제",
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic/mcp-server-playwright"
+      ],
+      "description": "Playwright 브라우저 자동화",
+      "env": {
+        "PLAYWRIGHT_HEADLESS": "true"
+      }
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic/mcp-server-puppeteer"
+      ],
+      "description": "Puppeteer 브라우저 제어",
+      "env": {
+        "PUPPETEER_HEADLESS": "true"
+      }
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic/mcp-server-chrome-devtools"
+      ],
+      "description": "Chrome DevTools 연동"
+    }
+  }
+}

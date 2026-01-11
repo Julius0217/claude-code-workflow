@@ -1,0 +1,32 @@
+{
+  "$schema": "https://claude.ai/schemas/mcp.json",
+  "description": "파일 시스템 MCP 서버 설정 예제",
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "--allowed-directories",
+        "/home/user/projects,/tmp"
+      ],
+      "description": "파일 시스템 확장 접근"
+    },
+    "git": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-git"
+      ],
+      "description": "Git 저장소 고급 기능"
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "description": "세션 간 메모리 저장"
+    }
+  }
+}
