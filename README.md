@@ -1,5 +1,16 @@
 # Claude Code Workflow
 
+[![Markdown Lint](https://github.com/krdn/claude-code-workflow/actions/workflows/markdown-lint.yml/badge.svg)](https://github.com/krdn/claude-code-workflow/actions/workflows/markdown-lint.yml)
+[![Link Check](https://github.com/krdn/claude-code-workflow/actions/workflows/link-check.yml/badge.svg)](https://github.com/krdn/claude-code-workflow/actions/workflows/link-check.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/krdn/claude-code-workflow?style=social)](https://github.com/krdn/claude-code-workflow/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/krdn/claude-code-workflow?style=social)](https://github.com/krdn/claude-code-workflow/network/members)
+
+[![GitHub issues](https://img.shields.io/github/issues/krdn/claude-code-workflow)](https://github.com/krdn/claude-code-workflow/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/krdn/claude-code-workflow)](https://github.com/krdn/claude-code-workflow/pulls)
+[![GitHub last commit](https://img.shields.io/github/last-commit/krdn/claude-code-workflow)](https://github.com/krdn/claude-code-workflow/commits/main)
+[![GitHub contributors](https://img.shields.io/github/contributors/krdn/claude-code-workflow)](https://github.com/krdn/claude-code-workflow/graphs/contributors)
+
 <img width="1666" height="928" alt="image" src="https://github.com/user-attachments/assets/c9e17942-bc0a-4c5b-957b-d92c6799cce1" />
 
 Claude Code의 핵심 사용 원칙과 생산성 높은 워크플로 구축 방법에 대한 연구 저장소입니다.
